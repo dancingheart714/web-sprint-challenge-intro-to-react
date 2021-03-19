@@ -1,6 +1,6 @@
 // Write your Character component here
 import React from 'react';
-import { Cards } from './CardStyling'
+import { Cards, Button } from './CardStyling'
 
 
 
@@ -20,26 +20,30 @@ const Character = (props) => {
          starships,
         } = props.characters
 
+
+        const buttonAlert = ()=> {
+            return alert("Are You Sure?");
+           }
+
     return (
         <Cards>
-            <Img src='./images/hero star wars.png' />
-            <h1> {name}</h1>
-            <h2>Species:  {species}</h2>
-            <h2>Gender:  {gender}</h2>
-            <h2>Hair Color:  {hair_color}</h2>
-            <h2>Eye Color:  {eye_color}</h2>
-            <h2>Skin Color:  {skin_color}</h2>
-            <h2>Mass:  {mass}</h2>
-            <h2>Height:  {height}</h2>
-            <h2>Birth Year:  {birth_year}</h2>
-            <h2>Homeworld:  {homeworld}</h2>
-            <h2>Vehicles:  {vehicles}</h2>
-            <h2>Starships:  {starships}</h2>
-            <h2>Films:  {films}</h2>
+            <img src='https://static.wixstatic.com/media/8946f9_e2963118363e469887052cdb0e4f48a7~mv2_d_1600_1600_s_2.png/v1/fill/w_168,h_168,al_c,usm_0.66_1.00_0.01/Star-Wars-transparent-logo.png'alt='star wars logo'/>
+            <h1>{name}</h1>
+            <h4>Species:{species}</h4>
+            <Button onClick={buttonAlert}>Homeworld:{homeworld}</Button>
+            <p>Gender:{gender}</p>
+            <p>Hair Color:{hair_color}</p>
+            <p>Eye Color:{eye_color}</p>
+            <p>Skin Color:{skin_color}</p>
+            <p>Mass:{mass}</p>
+            <p>Height:{height}</p>
+            <p>Birth Year:{birth_year}</p>
+            <Button onClick={() => alert("Want to see more Films?")}>Films:{films}</Button>
+            <Button onClick={buttonAlert}>Vehicles:{vehicles}</Button>
+            <Button onClick={() => alert("Want to go to Starships?")}>Starships:{starships}</Button>
+            
+
         </Cards>
     );
 }
-
 export default Character;
-
-
