@@ -32,11 +32,16 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React JS is a JavaScript library for building UI that was written by developers at Facebook.  It was created due to the massive amount of change that was required for the site.  React allows developers to build huge applications that have any number of data changes within it.  In a really big app like FB there can be hundreds of thousands of lines of code and React aims to "tame that beast" essentially saving developers hours of time 
+
 1. Describe component state.
+Components are reusable and independent bits of cod that serve the same function as a JavaScript function.  State is an object of a set of observable properties that control the behavior of the component; it's where you store property values  
 
 1. Describe props.
+Props are essentially arguments that are passed into components
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+Side effects are anything that affects something outside of the scope of the function that's being executed.  An example is when we make an API request.  The call to the API is a side effect, the data being extracted is a side effect.  We deal with side effects with useEffect.  Through this we can determine how we want the side effect to be controlled. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -59,12 +64,12 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 Your finished project must include all of the following requirements:
 
-- [ ] Use the following API:
+- [x ] Use the following API:
   - [Star Wars API](https://swapi.dev/)
 - [ ] Use the documentation and Google to learn how to fetch characters from your API.
-- [ ] Obtain a list of characters. One or several requests might be needed, depending on the API.
-- [ ] Set the list of characters into state.
-- [ ] Render your characters to the screen:
+- [x ] Obtain a list of characters. One or several requests might be needed, depending on the API.
+- [x ] Set the list of characters into state.
+- [x ] Render your characters to the screen:
   - Build a React component named 'Character' to render an individual character.
   - Map over the list in state, and for each character render a Character to the page.
   - You must display at least one element for each character in the data set.
